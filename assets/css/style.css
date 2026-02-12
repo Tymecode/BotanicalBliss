@@ -1,6 +1,7 @@
 :root {
   --white: #efe8cc;
   --light-brown: #d8c3a5;
+  --brown: #987e5a;
   --lemon-green: #c7f000;
   --dark-green: #1b5e20;
   --dark-grey: #333333;
@@ -67,9 +68,15 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--dark-grey);
+  color: var(--dark-green);
   font-weight: 100;
   font-size: 1.1rem;
+  transition: all 0.2s ease-out;
+}
+
+nav a:hover {
+  color: var(--brown);
+  transition: all 0.2s ease-out;
 }
 
 /* MOBILE MENU */
@@ -143,7 +150,7 @@ nav a {
   width: 100vw;
   position: relative;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 0px;
 }
 
 .banner-slider {
@@ -153,7 +160,7 @@ nav a {
 
 .slide {
   min-width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -170,7 +177,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 60, 30, 0.35);
+  /* background: rgba(0, 60, 30, 0.35); */
   color: white;
   text-align: center;
   padding: 20px;
@@ -178,7 +185,7 @@ nav a {
 
 .banner-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -203,7 +210,7 @@ nav a {
 
 /* SECTIONS */
 section {
-  padding: 100px 24px;
+  padding: 50px 24px;
   max-width: 1200px;
   margin: auto;
 }
@@ -211,9 +218,40 @@ section {
 section h2 {
   color: var(--dark-green);
   margin-bottom: 18px;
-  font-weight: 100;
+  font-weight: lighter;
 }
 
+section h3 {
+  color: var(--dark-grey);
+  margin-bottom: 14px;
+  font-weight: lighter;
+}
+
+strong {
+  color: var(--dark-green); /* Changes the text color to red */
+  font-size: 18px; /* Makes the text slightly larger */
+  font-weight: 500; /* Explicitly keeps the bold style (default behavior) */
+}
+
+i {
+  color: var(--dark-grey); /* Changes the text color to red */
+  font-size: 14px; /* Makes the text slightly larger */
+  font-weight: 500; /* Explicitly keeps the bold style (default behavior) */
+}
+.biglogo {
+  height: 245px;
+  width: 100%;
+}
+.addrs {
+  display: flex;
+  flex-direction: column;
+}
+.chino {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
 /* PRODUCTS */
 .products {
   display: grid;
@@ -242,11 +280,11 @@ section h2 {
   scroll-snap-align: start;
 }
 .weight {
-  color: var(--light-brown);
+  color: var(--dark-green);
 }
 
 .price {
-  color: var(--lemon-green);
+  color: var(--dark-green);
   font-weight: 600;
 }
 
@@ -259,21 +297,31 @@ section h2 {
 }
 
 .contact-info {
-  background: var(--light-brown);
+  background: var(--lemon-green);
   padding: 24px;
   border-radius: 16px;
   color: var(--dark-grey);
+  padding-left: 40px;
 }
 
-.contact-info p {
+.contact-info span {
   margin-bottom: 14px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info img {
+  margin-right: 14px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background-color: var(--light-brown);
+  border-radius: 12px;
+  padding: 20px;
 }
 
 .contact-form input,
@@ -323,12 +371,14 @@ section h2 {
 
 /* WHATSAPP CTA */
 .whatsapp-cta {
+  height: 40px;
+  width: 40px;
   position: fixed;
   bottom: 60px;
   left: 60px;
-  background: #25d366;
+  background: var(--dark-green);
   color: white;
-  padding: 14px 18px;
+  padding: 8px 8px;
   border-radius: 50px;
   display: flex;
   align-items: center;
